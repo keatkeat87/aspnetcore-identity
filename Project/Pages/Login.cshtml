@@ -7,9 +7,18 @@
 <h1>Login</h1>
 
 
-Register form
-<form asp-page="Login" asp-page-handler="Login">
+Login form
+<form asp-page="Login" asp-page-handler="Login" asp-route-returnurl="@ViewData["ReturnUrl"]">
     <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button type="submit">Login</button>
+</form>
+
+
+Register form
+<form asp-page="Login" asp-page-handler="Register">
+    <input type="text" name="username" placeholder="username">
+    <input type="text" name="phone" placeholder="phone">
     <input type="password" name="password" placeholder="password">
     <button type="submit">Login</button>
 </form>
